@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Array Methods</h4>
+    <p><a href="http://www.w3schools.com/js/js_array_methods.asp">http://www.w3schools.com/js/js_array_methods.asp</a></p>
+
+    <script>
+        var weekList = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+
+        // 10. 陣列的取值和長度
+        console.log(weekList[1]); // monday
+        console.log(weekList.length); // 7        
+
+        // 12. 陣列.toString()
+        var x = weekList.toString();
+        console.log(x);
+
+        // 13. 陣列.join("#")
+        var y = weekList.join("#");
+        console.log(y);
+        
+        console.clear();
+
+        // 14. 移除陣列中第一份資料
+        console.log(weekList);
+
+        var res = weekList.shift();
+        console.log(res); // sunday
+        console.log(weekList); // ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+
+        // 15. 移除陣列中最後一份資料
+        res = weekList.pop();
+        console.log(res); // saturday
+        console.log(weekList); // ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
+
+        // 16. 想要加入資料到陣列中可以怎麼操作?
+        // 方法A. 資料加在最後
+        res = weekList.push("apple");
+        console.log(res); // 6
+        console.log(weekList); // ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'apple']
+
+        // 方法B. 資料加在最前面
+        res = weekList.unshift("cat");
+        console.log(res); // 7
+        console.log(weekList); // ['cat', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'apple']
+
+        // 方法C. 變數名稱[索引] = 新增的資料
+        weekList[weekList.length] = "dog";
+        console.log(weekList); // ['cat', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'apple', 'dog']
+
+        console.clear();
+
+        // 20. 二維陣列的長度
+        var poker = [];
+        poker[0] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+        
+        console.log(poker.length); // 1
+        console.log(poker);
+        console.log(poker[0]);
+        console.log(poker[0].length); // 13
+
+    </script>
+</body>
+
+</html>

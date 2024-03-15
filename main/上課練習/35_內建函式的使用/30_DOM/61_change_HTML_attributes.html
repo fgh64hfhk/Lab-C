@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h3>點選圖片後，置換成另外一張圖片(可重複點擊)</h3>
+
+    <!-- 10. 設定一張圖片 -->
+    <img src="./img/find.png" id="demo" onclick="changeImg()">
+
+    <script>
+
+        function changeImg() {
+            // console.log("func run~");
+
+            // 11. 取得上一個步驟的圖片
+            var element = document.getElementById('demo');
+            // console.log("element:", element);
+
+            // 20. 取得目前圖片的src
+            var currentSrc = element.src;
+            // console.log(currentSrc);
+
+            // 20. 設定點選圖片後，換成另外一張圖片
+
+            if (currentSrc.endsWith('DOM/img/find.png')) {
+                element.src = './img/like.png';
+            } else {
+                element.src = './img/find.png';
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

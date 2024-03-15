@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Date Objects</h4>
+    <p><a href="https://www.w3schools.com/js/js_dates.asp">https://www.w3schools.com/js/js_dates.asp</a></p>
+    <h4>JavaScript Get Date Methods</h4>
+    <p><a href="https://www.w3schools.com/js/js_date_methods.asp">https://www.w3schools.com/js/js_date_methods.asp</a>
+    </p>
+    <hr>
+    <pre>
+    生成日期物件的方法：
+        new Date()
+        new Date(milliseconds)
+        new Date(dateString)
+        new Date(year, month, day, hours, minutes, seconds, milliseconds)
+    </pre>
+    <p id="now_date">date</p>
+    <p id="demo">demo</p>
+    <p id="demo2">demo</p>
+    <p id="demo3">demo</p>
+    <p id="demo4">demo</p>
+    <p id="demo5">demo</p>
+    <p id="demo6">demo</p>
+    <p id="demo7">demo</p>
+    <p id="demo8">demo</p>
+    <hr>
+    <p id="demo9">demo</p>
+    <p id="demo10">demo</p>
+    <hr>
+    <p>小練習：如何透過日期的加減，取得這個月的最後一天?</p>
+    <p id="new_date">new_date</p>
+    <p id="demo11">demo</p>
+    <hr>
+    <p>小練習：宣告兩個日期物件，並指定日期後，進行日期相減:</p>
+    <p id="date1">demo</p>
+    <p id="date2">demo</p>
+    <p id="demo12">demo</p>
+
+    <script>
+        // 宣告一個時間物件
+        var d = new Date();
+        window.document.getElementById('now_date').innerHTML = "現在時間:" + d;
+        // console.log("now_date:", d);
+
+        window.document.getElementById('demo').innerHTML = "時間物件:" + d;
+
+        // 取得年份
+        var y = d.getFullYear();
+        window.document.getElementById('demo2').innerHTML = "取得年份:" + y + "年";
+
+        // 取得月份 (請注意這裡)
+        var m = d.getMonth();
+        window.document.getElementById('demo3').innerHTML = "取得月份:" + (m + 1) + "月";
+
+        // 取得日期
+        var date = d.getDate();
+        window.document.getElementById('demo4').innerHTML = "取得日期:" + date + "號";
+
+        // 取得星期 (請注意這裡)
+        var w = d.getDay();
+        window.document.getElementById('demo5').innerHTML = "取得星期:" + "星期" + w;
+
+        // 取得時間
+        var h = d.getHours();
+        window.document.getElementById('demo6').innerHTML = "取得時間:" + h + "時";
+
+        // 取得分鐘
+        var min = d.getMinutes();
+        window.document.getElementById('demo7').innerHTML = "取得分鐘:" + min + "分";
+
+        // 取得秒數
+        var sec = d.getSeconds();
+        window.document.getElementById('demo8').innerHTML = "取得秒數:" + min + "秒";
+
+        // 若日期物件生成後，我們需要加一天
+        var plus = d.setDate(d.getDate() + 1);
+        window.document.getElementById('demo9').innerHTML = "加一天:" + d.getDate() + "號";
+
+        // 若日期物件生成後，我們需要加一個月
+        var plus_month = d.setMonth(d.getMonth() + 1);
+        window.document.getElementById('demo10').innerHTML = "加一月:" + (d.getMonth() + 1) + "月";
+
+        // 小練習：如何透過日期的加減，取得這個月的最後一天?
+        // var new_date = new Date();
+        var new_date = new Date(2018, 10, 24);
+        window.document.getElementById('new_date').innerHTML = "自定義的日期:" + new_date;
+        // console.log("new_date:", new_date);
+        var next_month = new_date.setMonth(new_date.getMonth() + 1, 1);
+        // console.log("new_date:", new_date);
+        var last_date = new_date.setDate(new_date.getDate() - 1);
+        // console.log("new_date:", new_date);
+        window.document.getElementById('demo11').innerHTML = "這個月的最後一天:" + new_date;
+
+        // 小練習：宣告兩個日期物件，並指定日期後，進行日期相減
+        // millisecond = 86400000 = 1000*60*60*24
+        var date1 = new Date("2022-03-25 15:00:00");
+        window.document.getElementById('date1').innerHTML = "第一個日期: " + date1;
+        var date2 = new Date("2022-12-30");
+        window.document.getElementById('date2').innerHTML = "第二個日期: " + date2;
+
+        var millisec;
+        var result;
+        if (date1 > date2) {
+            millisec = date1.getTime() - date2.getTime();
+            // console.log("date1 > date2:", millisec);
+            convertMilliseconds(millisec);
+        } else if (date2 > date1) {
+            millisec = date2.getTime() - date1.getTime();
+            // console.log("date2 > date1:", millisec);
+            convertMilliseconds(millisec);
+        } else {
+            // console.log("date1 = date2");
+        }
+
+        function convertMilliseconds(milliseconds) {
+            var sec = Math.floor(milliseconds / 1000);
+            var min = Math.floor(sec / 60);
+            var hours = Math.floor(min / 60);
+            var days = Math.floor(hours / 24);
+
+            sec %= 60;
+            min %= 60;
+            hours %= 24;
+            result = "Time difference: " + days + " days, " + hours + " hours, " + min + " minutes, " + sec + " seconds";
+            // console.log(result);
+        }
+
+        window.document.getElementById('demo12').innerHTML = "進行日期相減:" + result;
+
+    </script>
+
+</body>
+
+</html>

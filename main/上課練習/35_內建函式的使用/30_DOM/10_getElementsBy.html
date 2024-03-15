@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript HTML DOM Elements</h4>
+    <p><a href="https://www.w3schools.com/js/js_htmldom_elements.asp">https://www.w3schools.com/js/js_htmldom_elements.asp</a></p>
+
+    <hr>
+
+    <h2 id="myApple">Apple</h2>
+    <h2 class="group1">Bee</h2>
+    <h2 class="group1">Cat</h2>
+    <h2>Dog</h2>
+    <h2>Egg</h2>
+
+    <script>
+ 
+        // 10. 透過 getElementsByTagName 取得所有 <h2> 元素
+        var x = document.getElementsByTagName('h2');
+        console.log(x);
+    
+        // 20. 透過 getElementsByClassName 取得擁有 class 類別的 元素
+        var y = document.getElementsByClassName('group1');
+        console.log(y);
+        y[0].innerText = '胖丁'; // 實驗
+                
+        // 30. 透過 getElementById 取得 id 為 myApple 的元素
+        var z = document.getElementById('myApple');
+        console.log(z);
+        console.log(z.innerText);
+        // z.innerText = '<i>皮卡丘</i>'; // 實驗
+        // z.innerHTML = '<i>皮卡丘</i>';
+        
+        // 40. 透過 CSS Selectors 取得 標籤
+        //     querySelector()
+        //     querySelectorAll()
+
+        // var temp = document.querySelector('#myApple');
+        var temp = document.querySelector('.group1'); 
+        console.log(temp);
+
+        var temp2 = document.querySelectorAll('.group1');
+        console.log(temp2);
+        
+    </script>
+
+
+</body>
+
+</html>

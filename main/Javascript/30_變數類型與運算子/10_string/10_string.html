@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Strings and Escape Character</h4>
+    <p><a href="https://www.w3schools.com/js/js_strings.asp">https://www.w3schools.com/js/js_strings.asp</a></p>
+
+    <script>
+
+        // 請觀察底下的變數透過等號設定值後，
+        // 透過變數名稱再次取出，會得到什麼結果?
+
+        // 1. var str = '"C"';
+        var str = '"C"';
+        var str1 = "'C'";
+        console.log(str + ' ' + str1);
+
+        // 2. var str2 = "C:\temp";
+        var str2 = "C:\\temp";
+        console.log(str2);
+        var str_example = "We are the so-called \"Vikings\" from the north."
+        console.log(str_example);
+
+        var escape_char1 = "We are the so-called \b from the north.";
+        var escape_char2 = "We are the so-called \f from the north.";
+        var escape_char3 = "We are the so-called \n from the north.";
+        var escape_char4 = "We are the so-called \r from the north.";
+        var escape_char5 = "We are the so-called \t from the north.";
+        var escape_char6 = "We are the so-called \v from the north.";
+
+        console.log(escape_char1);
+        console.log(escape_char2);
+        console.log(escape_char3);
+        console.log(escape_char4);
+        console.log(escape_char5);
+        console.log(escape_char6);
+
+        // \b	Backspace
+        // \f	Form Feed
+        // \n	New Line
+        // \r	Carriage Return
+        // \t	Horizontal Tabulator
+        // \v   Vertical Tabulator
+
+        // 3. var str3 = str4;
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            padding: 10px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>31_while_練習</h1>
+    <h3>請設計一個介面，網頁必須輸入通關密碼1234才會停止</h3>
+    <button type="button" onclick="func()">點選啟動輸入密碼的介面</button>
+
+    <script>
+        function func() {
+            var notAllow = true;
+            while (notAllow) {
+
+                var password = prompt('請輸入通關密碼:');
+
+                if (parseInt(password) === 1234) {
+                    notAllow = false;
+                } else {
+                    alert('密碼輸入錯誤，請重新輸入!')
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

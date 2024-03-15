@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Math Object</h4>
+    <p><a href="https://www.w3schools.com/js/js_math.asp">https://www.w3schools.com/js/js_math.asp</a></p>
+
+    <script>
+        
+        // 取亂數
+        // Math.random()
+        // 0(含) ~ 1(不含)
+        var apple = Math.random();
+        console.log(apple);
+
+        // 小練習：透過 Math.random() 取得 0-5 之間的亂數
+        // Math.floor()
+        // 0.9 * ?? = 5 或 5.多
+        // ?? = 6
+        console.log(apple * 6);
+        console.log(Math.floor(apple * 6));
+        
+        // 小練習：透過 Math.random() 取得 2-5 之間的亂數
+        console.clear();
+
+        // +2
+        // 0.9 * ?? + 2 = 5 或 5.多
+        // 0.9 * ?? = 3 或 3.多
+        // ?? = 4
+        var x = Math.random();
+        var y = x * 4;
+        var z = Math.floor(y) + 2;
+        console.log(z);
+
+        // 小練習 : 寫成公式
+        var res = Math.floor(Math.random() * 4) + 2;
+
+        // Math.floor(Math.random() * 亂數區間個數) + 亂數起始值
+        // Math.floor(Math.random() * (最大值 - 最小值 + 1)) + 亂數起始值
+
+    </script>
+
+</body>
+
+</html>

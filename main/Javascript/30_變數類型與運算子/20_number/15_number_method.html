@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Number Methods</h4>
+    <p><a
+            href="https://www.w3schools.com/js/js_number_methods.asp">https://www.w3schools.com/js/js_number_methods.asp</a>
+    </p>
+
+    <script>
+        // 10. 數值運算常見的錯誤
+        // NaN（Not a Number）、Infinity（正無窮大）、-Infinity（負無窮大）
+        var result1 = 0 / 0; // NaN
+        console.log('result1: ' + result1);
+        var result2 = 1 / 0; // Infinity
+        console.log('result2: ' + result2);
+        var result3 = -1 / 0; // -Infinity
+        console.log('result3: ' + result3);
+
+        var x = 100/10;
+        console.log('x: ' + x);
+
+        var y = 100/'10';
+        console.log('y: ' + y);
+
+        var z = 100/'apple';
+        console.log('z: ' + z);
+
+        console.log('isNaN(x): ' + isNaN(x));
+        console.log('isNaN(y): ' + isNaN(y));
+        console.log('isNaN(z): ' + isNaN(z));
+
+        // 20. 判斷數值 isNaN()
+        var num1 = 42;
+        var num2 = "Hello";
+        console.log('isNaN(num1): ' + isNaN(num1)); // false
+        console.log('isNaN(num2): ' + isNaN(num2)); // true
+
+        console.clear();
+
+        // 30. 把文字轉換為數值 parseInt()
+        var a1 = "11" + 1;
+        console.log(a1);
+
+        var str1 = "123";
+        var str2 = "ABC";
+        console.log('parseInt(str1): ' + parseInt(str1)); // 123
+        console.log('parseInt(str2): ' + parseInt(str2)); // NaN
+
+        // 35. 數值轉字串的方法 toString()
+        var number = 42;
+        var strNumber = number.toString(); // "42"
+        console.log("strNumber: " + strNumber);
+        console.log("strNumber: " + typeof(strNumber));
+    </script>
+
+
+</body>
+
+</html>

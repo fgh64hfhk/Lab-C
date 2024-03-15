@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    
+    <h3>JavaScript Versions：<a href="https://www.w3schools.com/js/js_versions.asp">https://www.w3schools.com/js/js_versions.asp</a></h3>
+    <h3>ECMAScript 5 - 2009：<a href="https://www.w3schools.com/js/js_es5.asp">https://www.w3schools.com/js/js_es5.asp</a></h3>
+    <h3>ECMAScript 6 - 2015：<a href="https://www.w3schools.com/js/js_es6.asp">https://www.w3schools.com/js/js_es6.asp</a></h3>
+    
+    <h3>JavaScript Let：<a href="https://www.w3schools.com/js/js_let.asp">https://www.w3schools.com/js/js_let.asp</a></h3>
+    <h3>JavaScript Const：<a href="https://www.w3schools.com/js/js_const.asp">https://www.w3schools.com/js/js_const.asp</a></h3>
+    
+    <script>
+        // 10. var、let、const 宣告變數的方法
+        var x = 10;
+        let y = 20;
+        const z = 30;
+
+        console.log(x); // 10
+        console.log(y); // 20
+        console.log(z); // 30
+    
+        // 20. const 變數宣告並給值後是否還能修改?
+        // z = 99; // Assignment to constant variable.
+        // console.log(z);
+
+        // const pi = 3.14;
+
+        // 實驗: 事後給值 ==> X
+        // const z2;
+        // z2 = 100;
+
+
+        // 30. 在 if 流程控制中
+        //     透過 var、let 宣告兩個變數，並觀察他們的作用域
+
+        // if ==> 如果
+        // if (條件|判斷|比較) { 條件成立，要做的事情 }
+
+        // 如果降雨機率60%以上，就帶傘出門
+        // if (降雨機率60%以上) { 帶傘出門 }
+
+        console.log(2 > 1); // true
+
+        if (2 > 1) {
+            // 比較得到 true，就會執行大括號裡面的事情
+
+            var cat = 100;
+            console.log(cat); // 100
+
+            let dog = 200;
+            console.log(dog); // 200
+        }
+
+        console.log(cat); // 100
+        console.log(dog); // dog is not defined
+        
+    </script>
+</body>
+
+</html>

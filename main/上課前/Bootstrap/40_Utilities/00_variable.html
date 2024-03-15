@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* root element ==> html element */
+        :root {
+            --logo-color: orange;
+            --primary-color: lightblue;
+            --secondary-color: lightgreen;
+            --text-heading: black;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--primary-color);
+            color: black;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: var(--text-heading);
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+    <title>CSS Variables Demo</title>
+</head>
+
+<body>
+    <h1>Welcome to my website</h1>
+
+    <div class="container">
+        <p style="color: var(--logo-color)"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                fill="currentColor" class="bi bi-android" viewBox="0 0 16 16">
+                <path
+                    d="M2.76 3.061a.5.5 0 0 1 .679.2l1.283 2.352A8.94 8.94 0 0 1 8 5a8.94 8.94 0 0 1 3.278.613l1.283-2.352a.5.5 0 1 1 .878.478l-1.252 2.295C14.475 7.266 16 9.477 16 12H0c0-2.523 1.525-4.734 3.813-5.966L2.56 3.74a.5.5 0 0 1 .2-.678ZM5 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm6 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
+            </svg></p>
+    </div>
+
+    <div class="container">
+        <p>This is a demonstration of CSS variables.</p>
+        <p>Primary color: <span style="color: var(--primary-color);">Lorem ipsum</span></p>
+        <p>Secondary color: <span style="color: var(--secondary-color);">Dolor sit amet</span></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.nav</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h4>官方網站</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/components/navs-tabs/">https://getbootstrap.com/docs/5.2/components/navs-tabs/</a>
+        </p>
+        <h4>Bootstrap Navs</h4>
+        <p><a
+                href="https://www.w3schools.com/bootstrap5/bootstrap_navs.php">https://www.w3schools.com/bootstrap5/bootstrap_navs.php</a>
+        </p>
+
+        <hr>
+
+        <!-- 10. 加入一個 <ul> 標籤，並添加類別 .nav  -->
+        <!-- 20. 加入 4 個超連結： GitHub 、 Twitter 、 Examples 、 About  -->
+        <!-- 21. 超連結標籤加入 .nav-link -->
+
+        <!-- 25. <ul> 標籤 套用 .nav-fill 後，元素是否有分散對齊？ -->
+        <!-- 如果沒有分散對齊，需要在<li>添加 .nav-item -->
+
+        <!-- 30. 該如何讓超連結被選取時的底色改變? -->
+        <!-- 需要在<ul>添加 nav-pill，針對每一個<li>添加 .active -->
+        <!-- 需要建立與使用者互動的效果，而不是定格在同一畫面 -->
+
+        <!-- 50. 該如何讓選單在小屏幕時，改為單欄顯示 -->
+        <!-- 在上述程式碼中，我們使用了 flex-column 類別使選單在小屏幕上顯示為單欄，而在大屏幕上則保持原有的 flex-row。這樣，當螢幕寬度小於或等於 Bootstrap 斷點 md 時，選單將改為單欄顯示。 -->
+
+        <!-- 60. 該如何讓導覽被點選時，出現對應的資訊？ -->
+        <!--   a.  <a>元素 加入 href="#元素id" -->
+        <!--   b.  <a>元素 加入 data-bs-toggle="pill" -->
+        <!--   c.  製作內容： .tab-content > .tab-pane  -->
+        <!--   d.  製作內容： 包含 .tab-pane 的元素必須有 id 屬性  -->
+
+        <!-- ul.nav.nav-fill.nav-pills.flex-column.flex-md-row>li.nav-item*4>a.nav-link[href="#$" data-bs-toggle="pill"]{item$} -->
+
+        <!-- a href 的連結點不可以為數字 -->
+
+        <ul class="nav nav-fill nav-pills flex-column flex-md-row">
+            <li class="nav-item"><a href="#github" class="nav-link active" data-bs-toggle="pill">item1</a></li>
+            <li class="nav-item"><a href="#twitter" class="nav-link" data-bs-toggle="pill">item2</a></li>
+            <li class="nav-item"><a href="#examples" class="nav-link" data-bs-toggle="pill">item3</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link" data-bs-toggle="pill">item4</a></li>
+        </ul>
+
+        <!-- div.tab-content>div.tab-pane.fade*4[id="$"]>h1{item$}+p{Lorem} -->
+
+        <div class="tab-content p-3">
+            <div class="tab-pane fade show active" id="github">
+                <h1>item1</h1>
+                <p>Lorem</p>
+            </div>
+            <div class="tab-pane fade" id="twitter">
+                <h1>item2</h1>
+                <p>Lorem</p>
+            </div>
+            <div class="tab-pane fade" id="examples">
+                <h1>item3</h1>
+                <p>Lorem</p>
+            </div>
+            <div class="tab-pane fade" id="about">
+                <h1>item4</h1>
+                <p>Lorem</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

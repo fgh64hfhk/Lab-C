@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 5% 5%;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h4>官方網站</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/utilities/colors/">https://getbootstrap.com/docs/5.2/utilities/colors/</a>
+        </p>
+        <h4>Bootstrap Colors</h4>
+        <p><a
+                href="https://www.w3schools.com/bootstrap5/bootstrap_colors.php">https://www.w3schools.com/bootstrap5/bootstrap_colors.php</a>
+        </p>
+
+        <h4> 部分顏色名稱清單</h4>
+        <ul>
+            <li>primary</li>
+            <li>secondary</li>
+            <li>success</li>
+            <li>danger</li>
+            <li>warning</li>
+            <li>info</li>
+            <li>light</li>
+            <li>dark</li>
+            <li>muted</li>
+            <li>white</li>
+        </ul>
+        <hr>
+
+        <!-- 10. 測試改變文字顏色類別：.text-* -->
+        <div class="text-primary">color1</div>
+        <div class="text-secondary">color2</div>
+        <div class="text-success">color3</div>
+        <div class="text-danger">color4</div>
+        <div class="text-warning">color5</div>
+        <div class="text-info">color6</div>
+        <div class="text-light">color7</div>
+        <div class="text-dark">color8</div>
+        <div class="text-muted">color9</div>
+        <div class="text-white">color10</div>
+        <hr>
+        <!-- 11. 測試超連結套用文字顏色類別 -->
+        <p><a href="" class="text-primary">color1</a></p>
+        <p><a href="" class="text-secondary">color2</a></p>
+        <p><a href="" class="text-success">color3</a></p>
+        <p><a href="" class="text-danger">color4</a></p>
+        <p><a href="" class="text-warning">color5</a></p>
+        <p><a href="" class="text-info">color6</a></p>
+        <p><a href="" class="text-light">color7</a></p>
+        <p><a href="" class="text-dark">color8</a></p>
+        <p><a href="" class="text-muted">color9</a></p>
+        <p><a href="" class="text-white">color10</a></p>
+        <hr>
+
+        <!-- 20. 測試改變背景底色類別：.bg-* -->
+        <div class="text-bg-primary">bg-color1</div>
+        <div class="bg-secondary">bg-color2</div>
+        <div class="bg-success">bg-color3</div>
+        <div class="bg-danger">bg-color4</div>
+        <div class="bg-warning">bg-color5</div>
+        <div class="bg-info">bg-color6</div>
+        <div class="bg-light">bg-color7</div>
+        <div class="text-bg-dark">bg-color8</div>
+        <div class="bg-muted">bg-color9</div>
+        <div class="text-white">bg-color10</div>
+        <hr>
+
+        <!-- 30. 該如何使用在 :root 中定義好的顏色? -->
+        <p style="color: var(--bs-orange);">調用:root的顏色</p>
+
+    </div>
+</body>
+
+</html>

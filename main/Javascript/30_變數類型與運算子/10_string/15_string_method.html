@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript String Methods</h4>
+    <p><a href="http://www.w3schools.com/js/js_string_methods.asp">http://www.w3schools.com/js/js_string_methods.asp</a>
+    </p>
+    <h4>JavaScript String Reference</h4>
+    <p><a
+            href="https://www.w3schools.com/jsref/jsref_obj_string.asp">https://www.w3schools.com/jsref/jsref_obj_string.asp</a>
+    </p>
+
+    <script>
+        var test = "APPLE";
+
+        // 習作
+        const str1 = 'Life, the universe and everything. Answer:';
+        console.log(`${str1}${str1.length}`);
+
+        const str2 = "a".repeat(2 ** 29 - 24); // Success
+        console.log(str2.lengths);
+        // const str3 = "a".repeat(2 ** 29 - 23); // RangeError: Invalid string length
+
+        const buffer = new Uint8Array(2 ** 29 - 24).fill("a".codePointAt(0)); // This buffer is 512MiB in size
+        console.log(buffer);
+        // const str4 = new TextDecoder().decode(buffer); // This string is 1GiB in size
+
+        function getCharacterLength(str) {
+            return [...str].length;
+        }
+        console.log("A\uD87E\uDC04Z");
+        console.log(getCharacterLength("A\uD87E\uDC04Z"));
+
+        // 1. 字串的長度
+        var x = test.length;
+        console.log(x);
+
+        // 2. 字串.indexOf() 函式
+        // 可以幫助我們做什麼事情? 呼叫後回傳了什麼?
+
+        // (method) String.indexOf -> 
+        // param -> searchString: string, 
+        // param -> position?: number | undefined
+        // return -> number
+        var y = test.indexOf('P', 1);
+        console.log(y);
+
+        // 3. 字串.lastIndexOf() 函式
+        // 可以幫助我們做什麼事情? 呼叫後回傳了什麼?
+        var z = test.lastIndexOf('P');
+        console.log(z);
+
+        // 4. 字串.split() 幫助我們把字串分割為陣列
+        var fruits = "apple,bubble,lemon";
+        // (method) String.split -> 
+        // separator: string | RegExp,
+        // limit?: number | undefined):
+        // string[] (+1 overload)
+        var temp = fruits.split(',');
+        console.log(temp);
+
+        // 5. 希望把字串補零到指定長度的話，該如何處理?
+        //    目標 : 原始字串13756，希望產出00013756
+        // padstart()
+
+        // function concat_zero(str) {
+        //     let num = 8;
+        //     var zero = "0";
+        //     if (str.length < num) {
+        //         var temp = zero.repeat(num - str.length);
+        //         var newStr = temp.concat(str);
+        //         return newStr;
+        //     } else {
+        //         return str; // 如果字串長度不小於 num，直接返回原字串
+        //     }
+        // }
+        // var demo = "13756";
+        // var newDemo = concat_zero(demo);
+        // console.log(newDemo);
+        // var demo1 = "1234567eeeee8";
+        // var newDemo1 = concat_zero(demo1);
+        // console.log(newDemo1);
+
+        // chatGpt
+        function concat_zero(str, num) {
+
+            if (str.length < num) {
+                // 使用 substring 從 0 開始到 (num - str.length) 的位置補零
+                var temp = "0".repeat(num - str.length);
+                // 使用 replace 將原始字串的頭部替換為補零後的字串
+                var newStr = str.replace(/^/, temp);
+                return newStr;
+            } else {
+                return str;
+            }
+        }
+
+        var demo = "13756";
+        var newDemo = concat_zero(demo, 10);
+        console.log(newDemo);
+
+
+        // 6. 擷取字串
+        // 0911222333 是 手機
+        // 0423456789 是 電話號碼
+        var phones = "0000009112223330423456789";
+
+        function split_phone(str) {
+            var phoneIndex = str.trim().indexOf("0");
+            var phoneNumber, telNumber;
+            if (phoneIndex > -1) {
+                // 移動到第一個非零的位置
+                while (str[phoneIndex] === "0") {
+                    if (str[phoneIndex + 1] !== "0") {
+                        break;
+                    } else {
+                        phoneIndex++;
+                    }
+                }
+                // 擷取手機號碼部分
+                phoneNumber = str.substring(phoneIndex, phoneIndex + 10);
+                // 擷取電話號碼部分
+                telNumber = str.substring(phoneIndex + 10);
+                // 返回結果
+                return `手機: ${phoneNumber}，電話號碼: ${telNumber}`;
+            } else {
+                return "未找到有效的號碼";
+            }
+        }
+
+        console.log(split_phone(phones));
+
+
+        // 7. 比較 substring()、slice()
+        var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        console.log("str: " + str);
+
+        console.group("(0, 2)");
+        console.log(`str.substring(0,2)：${str.substring(0, 2)}`);
+        console.log(`str.slice(0,2)：${str.slice(0, 2)}`);
+        console.groupEnd();
+
+        console.group("(3, 5)");
+        console.log(`str.substring(3,5)：${str.substring(3, 5)}`);
+        console.log(`str.slice(3,5)： ${str.slice(3, 5)}`);
+        console.groupEnd();
+
+        console.group("(5, 3)");
+        console.log(`str.substring(5,3)：${str.substring(5, 3)}`);
+        console.log(`str.slice(5,3)：${str.slice(5, 3)}`);
+        console.groupEnd();
+
+        console.group("(3)");
+        console.log(`str.substring(3)：${str.substring(3)}`);
+        console.log(`str.slice(3)： ${str.slice(3)}`);
+        console.groupEnd();
+
+        console.group("(-5)");
+        console.log(`str.substring(-5)：${str.substring(-5)}`);
+        console.log(`str.slice(-5)：${str.slice(-5)}`);
+        console.groupEnd();
+
+    </script>
+</body>
+
+</html>

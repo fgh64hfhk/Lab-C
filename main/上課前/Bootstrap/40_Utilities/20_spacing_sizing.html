@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spacing and Sizing</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 5% 5%;
+            background-color: lightgray;
+        }
+
+        .w-80 {
+            width: 80%;
+        }
+
+        .h-80 {
+            height: 80%;
+        }
+
+        .box {
+            height: 50vh;
+            background-color: lightcoral;
+        }
+
+        .box>div {
+            background-color: lightskyblue;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h4>官方網站-Sizing</h4>
+        <p><a
+                href='https://getbootstrap.com/docs/5.2/utilities/sizing/'>https://getbootstrap.com/docs/5.2/utilities/sizing/</a>
+        </p>
+        <h4>官方網站-Spacing</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/utilities/spacing/">https://getbootstrap.com/docs/5.2/utilities/spacing/</a>
+        </p>
+        <h4>Utilities / Helper Classes> 頁面上搜尋 Spacing</h4>
+        <p><a
+                href="https://www.w3schools.com/bootstrap5/bootstrap_utilities.php">https://www.w3schools.com/bootstrap5/bootstrap_utilities.php</a>
+        </p>
+        <hr>
+
+        <div class="container">
+            <h1>example</h1>
+            <div class="w-25 p-3" style="background-color: #eee;">Width 25%</div>
+            <div class="w-50 p-3" style="background-color: #eee;">Width 50%</div>
+            <div class="w-75 p-3" style="background-color: #eee;">Width 75%</div>
+            <div class="w-100 p-3" style="background-color: #eee;">Width 100%</div>
+            <div class="w-auto p-3" style="background-color: #eee;">Width auto</div>
+        </div>
+        <hr>
+        <div class="container">
+            <div style="height: 100px; background-color: rgba(255,0,0,0.1);">
+                <div class="h-25 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 25%
+                </div>
+                <div class="h-50 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 50%
+                </div>
+                <div class="h-75 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 75%
+                </div>
+                <div class="h-100 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 100%
+                </div>
+                <div class="h-auto d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height auto
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- 10. 建立巢套的 div 元素
+                 a. 外層 div 使用 .box 類別；在上方 style 區段定義寬度和背景底色等
+                 b. 內層 div 使用 bootstrap 5 提供的 .w-* 類別 -->
+        <div class="box">
+            <div class="w-25">w-25</div>
+            <div class="w-50">w-50</div>
+            <div class="w-75">w-75</div>
+            <div class="w-100">w-100</div>
+            <div class="w-auto">w-auto</div>
+            <div class="w-80">w-80</div>
+        </div>
+        <hr>
+
+        <!-- 20. 複製步驟 10 ，內層 div 改為使用 bootstrap 5 提供的 .h-* 類別 -->
+        <div class="box">
+            <div class="h-25">w-25</div>
+        </div>
+        <hr>
+        <div class="box">
+            <div class="h-50">w-50</div>
+        </div>
+        <hr>
+        <div class="box">
+            <div class="h-75">w-75</div>
+        </div>
+        <hr>
+        <div class="box">
+            <div class="h-100">w-100</div>
+        </div>
+        <hr>
+        <div class="box">
+            <div class="h-auto">w-auto</div>
+        </div>
+        <hr>
+        <div class="box">
+            <div class="h-80">w-80</div>
+        </div>
+        <hr>
+
+        <div class="container">
+            <img src="../_image/sunny.jpg" class="mw-100" alt="sunny">
+        </div>
+        <hr>
+
+        <div class="box">
+            <img src="../_image/sunny.jpg" class="mw-100 mh-100" alt="sunny">
+        </div>
+        <hr>
+
+        <!-- 30. 同上，測試 bootstrap 5 提供的 .p-* 類別 -->
+        <div class="box">
+            <div class="w-25 p-0">w-25 p-0</div>
+            <div class="w-25 p-1">w-25 p-1</div>
+            <div class="w-25 p-2">w-25 p-2</div>
+        </div>
+        <hr>
+        <!-- 40. 同上，測試 bootstrap 5 提供的 .m-* 類別 -->
+        <div class="box">
+            <div class="w-25">w-25</div>
+            <div class="w-25 mt-5">w-25 mt-5</div>
+            <div class="w-25">w-25</div>
+        </div>
+        <hr>
+        <!-- 50. 測試 bootstrap 5 提供的 .m-auto 類別 -->
+        <div class="box">
+            <div class="w-25">w-25</div>
+            <div class="w-25 m-auto">w-25 m-auto</div>
+            <div class="w-25">w-25</div>
+        </div>
+        <hr>
+    </div>
+
+    <hr>
+
+    <!-- w3schools example -->
+    <div class="container mt-3">
+        <h1>Spacing Utilities</h1>
+        <p>Set the spacing of an element with the {property}{sides}-{breakpoint}-{size} classes. Omit breakpoint if you
+            want the padding or margin to work on all screen sizes.</p>
+        <div class="pt-4 bg-warning">I only have a top padding (1.5rem)</div>
+        <div class="p-5 bg-success">I have a padding on all sides (3rem)</div>
+        <div class="m-5 pb-5 bg-info">I have a margin on all sides (3rem) and a bottom padding (3rem)</div>
+        <div class="pt-md-5 bg-primary">I have a padding top sides (3rem) and a >=768px breakpoint</div>
+        <hr>
+        <div class="box">
+            <div class="w-25 pt-md-5 bg-primary">w-25 pt-md-5</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            padding: 10px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>21_switch_case_練習</h1>
+    <h3>請設計一個介面，讓使用者輸入頻道代碼後，網頁可以顯示對應的頻道名稱</h3>
+
+    <!-- 10. 請設計一個介面，讓使用者輸入頻道代碼後，網頁可以顯示對應的頻道名稱 -->
+    <div>請輸入頻道代碼：
+        <input type="text" value="channel_code" placeholder="請輸入頻道代碼">
+        <button type="button" onclick="func()">查詢</button>
+    </div>
+    <div id="demo">顯示的對應項目</div>
+
+    <script>
+        function func() {
+            var input_value = document.getElementsByTagName('input')[0].value;
+            // console.log("input_value:", input_value);
+            var channel_array = ['BBC自然知性頻道', 'NHK新聞資訊台', 'CNN International', 'HBO Signature'];
+
+            var display_msg;
+
+            switch (parseInt(input_value)) {
+
+                case 0:
+                    document.getElementById('demo').innerHTML = '<ul>' + channel_array.map(element => `<li>${element}</li>`).join('<br>') + '</ul>';
+                    break;
+                case 20:
+                    // console.log('BBC自然知性頻道');
+                    display_msg = channel_array[0];
+                    break;
+                case 65:
+                    // console.log('NHK新聞資訊台');
+                    display_msg = channel_array[1];
+                    break;
+                case 66:
+                    // console.log('CNN International');
+                    display_msg = channel_array[2];
+                    break;
+                case 80:
+                    // console.log('HBO Signature');
+                    display_msg = channel_array[3];
+                    break;
+                default:
+                    // console.log('頻道尚未建立');
+                    display_msg = '目前只有20、65、66、80的頻道代碼可以查詢，<br>其餘頻道尚未建立。';
+                    break;
+            }
+            document.getElementById('demo').innerHTML = display_msg;
+        }
+
+    </script>
+</body>
+
+</html>

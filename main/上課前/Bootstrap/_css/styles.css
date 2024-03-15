@@ -1,0 +1,17 @@
+* {
+
+}
+body {
+    margin: 0;
+    padding: 3%;
+    background-color: bisque;
+}
+
+.original {
+    padding: 50px;
+    background-color: lightgray;
+}
+
+.container {
+    background-color: lightgray;
+}

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justify-content</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 5% 5%;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h4>官方網站</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/utilities/flex/#justify-content">https://getbootstrap.com/docs/5.2/utilities/flex/#justify-content</a>
+        </p>
+        <h4>Bootstrap Flex - Responsive Flex Classes (在最底下)</h4>
+        <p><a
+                href="https://www.w3schools.com/bootstrap5/bootstrap_flex.php">https://www.w3schools.com/bootstrap5/bootstrap_flex.php</a>
+        </p>
+        <hr>
+
+        <!-- 預設結構 -->
+        <div class="p-3 bg-secondary">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div>
+        <hr>
+
+        <div class="d-flex justify-content-start p-3 bg-secondary">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div>
+        <br>
+        <div class="d-flex justify-content-end p-3 bg-secondary">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center p-3 bg-secondary">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div>
+        <br>
+        <div class="d-flex justify-content-between p-3 bg-secondary">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="me-auto ms-auto p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div>
+        <br>
+        <div class="d-flex justify-content-around p-3 bg-secondary">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div>
+        <br>
+        <div class="d-flex justify-content-evenly p-3 bg-secondary">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div>
+        <hr>
+
+        <!-- ** 請比較下列四種class ** -->
+
+        <!-- 10. .justify-content-* -->
+        <h3>.justify-content-*</h3>
+        <div class="d-flex justify-content-center p-3 bg-secondary" style="height: 200px;">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div>
+        <br>
+        <!-- 20. .align-items-* -->
+        <h3>.align-items-*</h3>
+        <div class="d-flex align-items-center p-3 bg-secondary" style="height: 200px;">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div>
+        <br>
+        <!-- 21. .align-self-* -->
+        <h3>.align-self-*</h3>
+        <div class="d-flex p-3 bg-secondary" style="height: 200px;">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="align-self-center p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div>
+        <br>
+        <div class="d-flex p-3 bg-secondary" style="height: 200px;">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="align-self-start p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div>
+        <br>
+        <div class="d-flex p-3 bg-secondary" style="height: 200px;">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="align-self-end p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div>
+        <br>
+        <div class="d-flex p-3 bg-secondary" style="height: 200px;">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="align-self-baseline p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div>
+        <br>
+        <div class="d-flex p-3 bg-secondary" style="height: 200px;">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="align-self-stretch p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div>
+        <hr>
+
+        <!-- 22. .align-content-*  -->
+        <h3>.align-content-*</h3>
+        <div class="d-flex align-content-start flex-wrap p-3 bg-secondary" style="height: 300px;">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div><br>
+        <div class="d-flex align-content-end flex-wrap p-3 bg-secondary" style="height: 300px;">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div><br>
+        <div class="d-flex align-content-center flex-wrap p-3 bg-secondary" style="height: 300px;">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div><br>
+        <div class="d-flex align-content-between flex-wrap p-3 bg-secondary" style="height: 300px;">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div><br>
+        <div class="d-flex align-content-around flex-wrap p-3 bg-secondary" style="height: 300px;">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div><br>
+        <div class="d-flex align-content-stretch flex-wrap p-3 bg-secondary" style="height: 300px;">
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+            <div class="p-2 bg-info">item1</div>
+            <div class="p-2 bg-success">item2</div>
+            <div class="p-2 bg-warning">item3</div>
+            <div class="p-2 bg-danger">item4</div>
+            <div class="p-2 bg-white">item5</div>
+        </div><hr>
+
+    </div>
+
+</body>
+
+</html>

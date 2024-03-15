@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Events</h4>
+    <p><a href='https://www.w3schools.com/js/js_events.asp'>https://www.w3schools.com/js/js_events.asp</a></p>
+
+    <h4>JavaScript HTML DOM Events Examples</h4>
+    <p><a
+            href='https://www.w3schools.com/js/js_events_examples.asp'>https://www.w3schools.com/js/js_events_examples.asp</a>
+    </p>
+
+    <h4>JavaScript HTML DOM EventListener</h4>
+    <p><a
+            href='https://www.w3schools.com/js/js_htmldom_eventlistener.asp'>https://www.w3schools.com/js/js_htmldom_eventlistener.asp</a>
+    </p>
+    <hr>
+
+    <div>
+        <label for="userPhone">請輸入手機號碼：</label><br>
+        <input type="text" id="userPhone"><br><br>
+        <button id="btnLogin">登入</button>
+    </div>
+
+    <script>
+        // 10. 撰寫一個函式 checkLength: 
+        //  檢查使用者輸入的手機號碼必須為10碼
+        function checkLength(phoneNumber) {
+            console.log('call checkLength()');
+            if (phoneNumber.length != 10) {
+                console.log('手機號碼不可以少於10碼');
+                return false;
+            }
+            return true;
+        }
+
+        // 20. 撰寫一個函式 checkNumber: 
+        //  檢查手機號碼必須全部為數值
+        function checkNumber(phoneNumber) {
+            console.log('call checkNumber()');
+            if (isNaN(phoneNumber)) {
+                console.log('手機號碼必須全部為數值');
+                return false;
+            }
+            return true;
+        }
+
+        // 30. 在登入按鈕點選後執行上述兩個函式
+
+        // btnLogin.onclick = checkLength;
+
+        // function btnLogin() {
+        //     var temp = userPhone.value;
+        //     console.log(temp);
+        //     if (checkLength(temp) && checkNumber(temp)) {
+        //         console.log("login success!");
+        //     } else {
+        //         console.log("login fail!");
+        //     }
+
+        // }
+
+        btnLogin.addEventListener('click', checkLength);
+        btnLogin.addEventListener('click', checkNumber);
+
+    </script>
+</body>
+
+</html>

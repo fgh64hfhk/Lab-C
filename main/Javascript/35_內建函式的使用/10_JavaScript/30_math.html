@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Math Object</h4>
+    <p><a href="https://www.w3schools.com/js/js_math.asp">https://www.w3schools.com/js/js_math.asp</a></p>
+    <hr>
+
+    <script>
+
+        // // 取亂數
+        // var random = Math.random();
+
+        // // 小練習：透過 Math.random() 取得 0-5 之間的亂數
+
+        // for (let index = 0; index < 10; index++) {
+        //     var random_5 = Math.floor(Math.random() * 6);
+        //     console.log("取得 0-5 之間的亂數:", random_5);
+        // }
+
+        // console.log("-----------------分隔線-----------------");
+
+        // for (let index = 0; index < 10; index++) {
+        //     var random1_5 = Math.floor(Math.random() * 5) + 1;
+        //     console.log("取得 1-5 之間的亂數:", random1_5);
+        // }
+
+        // // 小練習：透過 Math.random() 取得 2-5 之間的亂數
+
+        // console.log("-----------------分隔線-----------------");
+
+        // for (let index = 0; index < 10; index++) {
+        //     var random2_5 = Math.floor(Math.random() * 4) + 2;
+        //     console.log("取得 2-5 之間的亂數:", random2_5);
+        // }
+
+        // console.log("-----------------分隔線-----------------");
+
+        for (let index = 0; index < 100; index++) {
+            var random77_131 = Math.floor(Math.random() * 55) + 77;
+            console.log("取得 77-131 之間的亂數:", random77_131);
+            if (random77_131 > 131 || random77_131 < 77) {
+                console.log("error");
+                break;
+            }
+        }
+
+        var x;
+        var y;
+        var random_x_y = Math.floor(Math.random() * (y - x + 1)) + x;
+
+        console.log("結論: 最小值到最大值的亂數 --> Math.floor(Math.random() * (最大值 - 最小值 + 1)) + 亂數起始值");
+
+    </script>
+
+</body>
+
+</html>

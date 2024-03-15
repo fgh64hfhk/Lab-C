@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            padding: 10px;
+            background-color: bisque;
+        }
+
+        pre {
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 顯示效果的地方 -->
+    <h1>51_for_練習</h1>
+    <h2>10. 使用 for 迴圈，列印出這個月份從1號到目前系統日</h2>
+    <div id="demo">顯示從1號到目前系統日:</div>
+    <hr>
+
+    <h2>20. 使用 for 迴圈，逐一取得陣列裡面的元素</h2>
+    <div id="demo1">取得陣列裡面的元素:</div>
+    <hr>
+
+    <h2>30. 使用 for 迴圈，計算從 1 加到 10</h2>
+    <div id="demo2">計算從 1 加到 10</div>
+    <hr>
+
+    <h2>40. 雙層迴圈 - 長方型星星 #Square</h2>
+    <div id="Square">長方型星星<br></div>
+    <hr>
+
+    <h2>50. 雙層迴圈 - 三角形 #Triangle</h2>
+    <div id="Triangle">三角形<br></div>
+    <hr>
+
+    <h2>60. 列印九九乘法表</h2>
+    <pre id="Times">九九乘法表<br><br></pre>
+    <hr>
+
+    <h2>70. 雙層迴圈 - 聖誕樹 #Tree</h2>
+    <input id="input" value="0" placeholder="請輸入要顯示的聖誕樹高度">
+    <button onclick="display()">顯示</button>
+    <pre id="Tree">聖誕樹<br></pre>
+    <hr>
+
+    <script>
+        // 10. 使用 for 迴圈，列印出這個月份從1號到目前系統日
+        var today = new Date();
+        var today_month = (today.getMonth() + 1).toString().padStart(2, '0');
+        var today_date = today.getDate().toString();
+        var demoElement = document.getElementById('demo');
+        // console.log(demoElement);
+        for (let i = 1; i <= today_date; i++) {
+            demoElement.innerHTML += `<br>日期 ==> ${today_month}/${(i).toString().padStart(2, '0')}`;
+        }
+
+
+        // // 20. 使用 for 迴圈，逐一取得陣列裡面的元素
+        var weekList = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+
+        for (let index = 0; index < weekList.length; index++) {
+            const element = weekList[index];
+            // console.log(element);
+            document.getElementById('demo1').innerHTML += "<br>" + element;
+        }
+
+        // 30. 使用 for 迴圈，計算從 1 加到 10
+        var result = 0;
+        for (let index = 1; index <= 10; index++) {
+
+            result += index;
+
+        }
+        document.getElementById('demo2').innerHTML += "<br>" + "答案:" + result;
+
+        // 40. 雙層迴圈 - 長方型星星 #Square
+        // ****
+        // ****
+        // ****
+        // ****
+        // ****
+        // ****
+        var Square = '';
+        for (let index = 1; index <= 6; index++) {
+            for (let index = 1; index <= 4; index++) {
+                Square += "*";
+            }
+            // console.log(Square);
+            document.getElementById('Square').innerHTML += "<br>" + Square;
+            Square = '';
+        }
+
+        // 50. 雙層迴圈 - 三角形 #Triangle
+        // *
+        // **
+        // ***
+        // ****
+        // *****
+        var Triangle = '';
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 1; j <= i; j++) {
+                Triangle += "*";
+                // if (j == i) {
+                //     break;
+                // }
+            }
+            // console.log(Triangle);
+            document.getElementById('Triangle').innerHTML += "<br>" + Triangle;
+            Triangle = '';
+        }
+
+        // 60. 列印九九乘法表 (tab為 "&#9;") + <pre> 標籤 #Times
+        var Lab;
+        for (var i = 0; i <= 9; i++) {
+            Lab = '';
+            if (i === 0) {
+                for (var j = 0; j <= 9; j++) {
+                    if (j === 0) {
+                        Lab += "x\\y";
+                    } else {
+                        Lab += "\t" + "\t" + j;
+                    }
+                }
+                // console.log(Lab);
+                document.getElementsByTagName('pre')[0].innerHTML += Lab;
+            } else {
+                for (var j = 0; j <= 9; j++) {
+                    if (j === 0) {
+                        Lab += i;
+                    } else {
+                        var result = `${i} * ${j} = ${i * j}`;
+                        Lab += "\t" + result;
+                    }
+
+                }
+                // console.log(Lab);
+                document.getElementsByTagName('pre')[0].innerHTML += "<br>" + Lab;
+            }
+        }
+
+
+        // 70. 雙層迴圈 - 聖誕樹 #Tree
+        //     *
+        //    ***
+        //   *****
+        //  *******
+        // *********
+        //    |||
+        //    |||
+        function generateChristmasTree(height) {
+            let Tree = '';
+
+            for (let i = 1; i <= height; i++) {
+                // 計算空格數與星號數
+                let space = height - i;
+                let stars = 2 * i - 1;
+                // 內層迴圈打印空格
+                for (let j = 0; j < space; j++) {
+                    Tree += " ";
+                }
+                // 內層迴圈打印星號
+                for (let k = 0; k < stars; k++) {
+                    Tree += "*";
+                }
+                Tree += '\n';
+            }
+
+            // 打印樹幹的部分
+            // 設定高度
+            if (height == 0) {
+                return "未輸入高度";
+            } else {
+                let trunk = 2;
+                for (let x = 0; x < trunk; x++) {
+                    // 打印空格
+                    for (let y = 0; y < height - 2; y++) {
+                        Tree += " ";
+                    }
+                    // 打印樹幹
+                    Tree += "| |\n";
+                }
+                return Tree;
+            }
+        }
+
+
+        // 顯示函式
+        function display() {
+            // 獲取要顯示的聖誕樹高度
+            const height = document.getElementById('input').value;
+            // console.log(height);
+            // 獲取聖誕樹元素
+            const christmasTreeElement = document.getElementById('Tree');
+            // 生成聖誕樹並顯示在網頁上
+            christmasTreeElement.textContent = generateChristmasTree(height);
+        }
+
+        /* 關於innerHTML安全性的說明 */
+        /* 雖然理論上你確實可以使用 innerHTML 來設置 HTML 內容，但在這種情況下，使用 textContent 是更安全和合適的選擇。這是因為生成的內容主要是文本，其中包含空格和換行符，並且不包含任何用於防止 HTML 注入攻擊的特殊字符。
+        如果你使用 innerHTML，可能會讓不安全的內容進入，因為它將解釋所有的 HTML 代碼。這樣一來，如果有人恶意插入惡意腳本，就有可能導致安全風險。
+        使用 textContent，則僅將文本內容顯示為純文本，而不解釋 HTML。這就減少了潛在的安全問題。
+        總的來說，當你處理主要是文本的內容時，並且不需要解釋 HTML，使用 textContent 更好。如果你確定內容是安全的，而且你需要解釋 HTML，那麼使用 innerHTML 可能是一個選擇。在這種情況下，請確保過濾和處理所有用戶輸入，以防止潛在的安全漏洞。
+        */
+
+    </script>
+</body>
+
+</html>

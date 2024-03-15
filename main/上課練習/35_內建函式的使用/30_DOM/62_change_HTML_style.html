@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .body {
+            margin: 0px;
+            padding: 3%;
+            background-color: lightgray;
+        }
+        .container {
+            width: 200px;
+            height: 200px;
+            margin: 0px;
+            padding: 3%;
+            background-color: bisque;
+        }
+        .container p {
+
+        }
+        .container img {
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <p id="memo">點選圖片後，放大圖片和文字</p>
+        <!-- 10. 設定一張圖片 -->
+        <img src="./img/find.png" alt="find" id="find" onclick="myChange()">
+    </div>
+
+    <script>
+        function myChange() {
+            console.log('func run~');
+
+            // 20. 網頁的 圖片的 樣式的 寬度 改變
+            var imgElement = document.getElementById('find');
+            console.log("imgElement:", imgElement);
+            imgElement.style.width = '100%';
+
+            // 21. 網頁的 圖片的 樣式的 高度 改變
+            imgElement.style.height = '100%';
+
+            // 22. 網頁的 memo的 樣式的 字型 改變
+            var pElement = document.getElementById('memo');
+            console.log(pElement);
+            pElement.style.fontSize = '5rem';
+        }
+
+        
+        
+    </script>
+
+</body>
+
+</html>

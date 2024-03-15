@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 5% 5%;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h4>官方網站</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/utilities/float/">https://getbootstrap.com/docs/5.2/utilities/float/</a>
+        </p>
+        <h4>Bootstrap Utilities> 頁面上搜尋 Float and Clearfix</h4>
+        <p><a
+                href="https://www.w3schools.com/bootstrap5/bootstrap_utilities.php">https://www.w3schools.com/bootstrap5/bootstrap_utilities.php</a>
+        </p>
+
+        <hr>
+
+        <!-- 10. 透過 .float-start 和 .float-end 設定元素位置 -->
+        <h2>浮動崩塌</h2>
+        <div class="bg-info">
+            <div class="bg-danger p-3 float-end">A</div>
+            <div class="bg-success p-3">B</div>
+        </div>
+        <hr>
+        <div class="bg-info">
+            <div class="bg-warning p-3 float-end">C</div>
+            <div class="bg-primary p-3 float-end">D</div>
+        </div>
+        <hr>
+        <div class="bg-info">
+            <div class="bg-secondary p-3 float-end">E</div>
+            <div class="text-bg-dark p-3 float-start">F</div>
+        </div>
+        <hr>
+        <div class="bg-info">
+            <div class="bg-danger p-3">G</div>
+            <div class="bg-success p-3">H</div>
+        </div>
+        <hr>
+
+        <!-- 20. 透過在外層容器加入 .clearfix 清除掉浮動效果 -->
+        <h2>解決浮動崩塌</h2>
+        <div class="bg-info clearfix p-3">
+            <div class="bg-danger p-3 float-end">A</div>
+            <div class="bg-success p-3">B</div>
+        </div>
+        <hr>
+        <div class="bg-info clearfix p-3">
+            <div class="bg-warning p-3 float-end">C</div>
+            <div class="bg-primary p-3 float-end">D</div>
+        </div>
+        <hr>
+        <div class="bg-info clearfix p-3">
+            <div class="bg-secondary p-3 float-end">E</div>
+            <div class="text-bg-dark p-3 float-start">F</div>
+        </div>
+        <hr>
+        <div class="bg-info clearfix p-3">
+            <div class="bg-danger p-3">G</div>
+            <div class="bg-success p-3">H</div>
+        </div>
+        <hr>
+
+    </div>
+
+</body>
+
+</html>

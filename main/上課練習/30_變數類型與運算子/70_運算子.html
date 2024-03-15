@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Operators</h4>
+    <p><a href="https://www.w3schools.com/js/js_operators.asp">https://www.w3schools.com/js/js_operators.asp</a></p>
+
+    <script>
+        // a + b
+        // a、b ==> 運算元
+        //    + ==> 運算子
+        
+        // 算術運算子：四則運算、取餘數 (%) 等
+        var a = 10;
+        var b = 3;
+
+        // 10. 取餘數 %
+        console.log(a % b); // 1
+        console.log(a % 2); // 0
+
+        console.clear();
+
+        // 11. ++變數  和  變數++ 
+        // b = b + 1;
+        // b+=1;
+        // b++;
+        // console.log(b); // 4
+
+        // console.log(b++); // 3
+        console.log(++b); // 4
+        console.log(b); // 4
+
+
+        // 比較運算子：評估條件，回傳 true 或者 false 值
+        var x = 10;
+        var y = "10";
+        var z = 5;
+
+        // 20. == 和 === 的差異在?
+        // var temp = (x == y); // true
+        var temp = (x === y); // false
+        console.log(temp);
+
+
+        // 21. 測試 2 > 1
+        console.log(2 > 1); // true
+
+        // 22. 測試 1 < 2 < 3 和 3 > 2 > 1
+        console.log(1 < 2 < 3); // true
+        console.log(3 > 2 > 1); // false
+
+        // 23. 測試 true == 1 還有 false == 0 
+        console.log(true == 1); // true
+        console.log(false == 0); // true
+        
+        // 30. 不等於的寫法 (!=)
+        // !  ==> not
+        var apple = 10;
+        var bee = 5;
+        console.log(apple != bee); // true
+
+        // 邏輯運算子
+
+        // 40. and (&&) 條件需要同時成立的時候
+        console.log(apple == 10 && bee == 5); // true
+        console.log(apple == 10 && bee == 10); // false
+
+        // 50. or (||) 條件擇一成立
+        console.log(apple == 10 || bee == 5); // true
+        console.log(apple == 10 || bee == 10); // true
+
+
+        // 60. 三元運算子 (condition) ? value1:value2
+        // if (條件|比較|判斷) { 條件成立，執行這段 }
+
+        // if (條件|比較|判斷) {
+        //     條件成立，執行這段
+        // } else {
+        //     條件不成立，執行這段
+        // }
+
+        // 情境: 蘋果早上賣100元，其他時間賣80元
+        // ==> 將以上情境寫成 if 判斷式
+
+        // if (現在時間是早上) {
+        //     蘋果賣100元
+        // } else {
+        //     蘋果賣80元
+        // }
+
+        // var temp = 'AM'; // 現在時間
+        // var apple = 0; // 蘋果的價格
+
+        // if (temp == 'AM') {
+        //     apple = 100;
+        // } else {
+        //     apple = 80;
+        // }
+
+        // console.log(apple);
+
+
+        // (condition) ? value1:value2
+        // (條件|判斷|比較) ? 成立執行這段 : 不成立執行這段
+        var temp = 'PM'; // 現在時間
+        var apple = (temp == 'AM') ? 100 : 80;
+        console.log(apple);
+
+    </script>
+
+</body>
+
+</html>

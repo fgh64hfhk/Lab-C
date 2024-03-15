@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <style>
+        #apple {
+            position: relative;
+            top: 50px;
+        }
+    </style> -->
+</head>
+
+<body>
+
+    <!-- 10. 畫面上設定一張圖片 -->
+    <img src="./img/like.png" id="apple">
+    <!-- <img src="./img/like.png" id="apple" style="top: 100px; position: relative;"> -->
+   
+    <script>
+       
+        // 20. 透過 元素.style.top 取得 樣式 top 值
+        var elem = document.getElementById('apple');
+        console.log(elem);
+
+        var res = elem.style.top;
+        console.log(res); // 空白 | 100px
+
+        // 30. 透過 window.getComputedStyle(元素).getPropertyValue(樣式屬性));
+        var temp = window.getComputedStyle(elem).getPropertyValue('top');
+        console.log(temp); // auto | 100px
+
+        // 40. 觀察上述兩者差異
+ 
+    </script>
+</body>
+
+</html>

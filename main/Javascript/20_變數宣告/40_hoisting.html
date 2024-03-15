@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>Hoisting is JavaScript's default behavior of moving declarations to the top.</h4>
+
+    <p>JavaScript Hoisting：<a href="https://www.w3schools.com/js/js_hoisting.asp">w3schools hoisting</a></p>
+    <p>JavaScript Hoisting 是什麼？ let, const, var 的差異是什麼？<a
+            href="read://https_www.shubo.io/?url=https%3A%2F%2Fwww.shubo.io%2Fjavascript-hoisting%2F">What is Hoisting
+            in JavaScript?</a></p>
+
+    <pre>
+        訊息選項：
+        (A). ReferenceError: 變數名稱 is not defined
+        (B). ReferenceError: Cannot access 變數名稱 before initialization 
+        (C). 主控台顯示: undefined 
+        (D). 主控台顯示: 指定數值 
+    </pre>
+
+    <script>
+
+        // 10. 測試變數的宣告和使用
+
+        // 11. console.log(x);
+        // 請試著說明為什麼: 
+        // 說明: 
+        // console.log(x); // (A)
+
+        // 12. 
+        // var y;
+        // console.log(y);
+        // 請試著說明為什麼: 
+        // 說明: 
+
+        // 13. 
+        // console.log(z);
+        // var z = 20;
+        // 請試著說明為什麼:
+        // 說明: 
+
+
+        function isEven(n) {
+            if (n === 0) return true;
+            return isOdd(n - 1);
+        }
+
+        function isOdd(n) {
+            if (n === 0) return false;
+            return isEven(n - 1);
+        }
+
+        console.log(isEven(10)); // true
+
+    </script>
+</body>
+
+</html>

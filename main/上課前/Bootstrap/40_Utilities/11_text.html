@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 5% 5%;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h4>官方網站-Text</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/utilities/text/">https://getbootstrap.com/docs/5.2/utilities/text/</a>
+        </p>
+        <h4>官方網站-Text wrapping and overflow</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/utilities/text/#text-wrapping-and-overflow">https://getbootstrap.com/docs/5.2/utilities/text/#text-wrapping-and-overflow</a>
+        </p>
+
+        <hr>
+
+        <!-- 10. 文字位置 -->
+        <p class="text-start">text1</p>
+        <p class="text-center">text2</p>
+        <p class="text-end bg-primary">text3</p>
+        <span class="text-end bg-warning">text-4</span>
+        <hr>
+
+        <!-- 15. 在不同的螢幕寬度上，設定不同的對齊方式 -->
+        <p class="text-start">Start aligned text on all viewport sizes.</p>
+        <p class="text-center">Center aligned text on all viewport sizes.</p>
+        <p class="text-end">End aligned text on all viewport sizes.</p>
+        <hr>
+        <p class="text-sm-end">Start aligned text on viewports sized SM (small) or wider.</p>
+        <p class="text-md-end">Start aligned text on viewports sized MD (medium) or wider.</p>
+        <p class="text-lg-end">Start aligned text on viewports sized LG (large) or wider.</p>
+        <p class="text-xl-end">Start aligned text on viewports sized XL (extra-large) or wider.</p>
+        <hr>
+
+        <!-- 20. 當文字溢出時，使用「…」來表達：.text-truncate -->
+        <p class="text-truncate bg-primary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cum quo perferendis nihil deserunt facilis earum, dolore nobis natus consequuntur ad ipsam doloremque error, saepe blanditiis quas fuga enim at.</p>
+        <p class="text-truncate bg-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reprehenderit asperiores sunt laborum impedit ut laudantium cupiditate atque consectetur, qui assumenda libero doloremque dolor optio nihil delectus totam. Similique, aliquam.</p>
+        <p class="text-truncate bg-danger">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet blanditiis libero, doloremque deserunt dolorem eaque, reiciendis dolores corrupti quas repellendus porro, saepe dolorum harum provident illum vel eos accusamus repudiandae.</p>
+        <hr>
+
+        <!-- 30. 文字大小寫 -->
+        <!--     .text-lowercase | .text-uppercase | .text-capitalize -->
+        <p class="text-lowercase bg-primary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cum quo perferendis nihil deserunt facilis earum, dolore nobis natus consequuntur ad ipsam doloremque error, saepe blanditiis quas fuga enim at.</p>
+        <p class="text-uppercase bg-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reprehenderit asperiores sunt laborum impedit ut laudantium cupiditate atque consectetur, qui assumenda libero doloremque dolor optio nihil delectus totam. Similique, aliquam.</p>
+        <p class="text-capitalize bg-danger">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet blanditiis libero, doloremque deserunt dolorem eaque, reiciendis dolores corrupti quas repellendus porro, saepe dolorum harum provident illum vel eos accusamus repudiandae.</p>
+        <hr>
+
+        <!-- 40. 文字外觀-->
+        <!--     .fs-1 |  .fw-bold  | .fst-italic -->
+        <p class="text-white fs-1 bg-primary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cum quo perferendis nihil deserunt facilis earum, dolore nobis natus consequuntur ad ipsam doloremque error, saepe blanditiis quas fuga enim at.</p>
+        <p class="text-white fs-2 bg-primary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cum quo perferendis nihil deserunt facilis earum, dolore nobis natus consequuntur ad ipsam doloremque error, saepe blanditiis quas fuga enim at.</p>
+        <p class="text-white fs-3 bg-primary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cum quo perferendis nihil deserunt facilis earum, dolore nobis natus consequuntur ad ipsam doloremque error, saepe blanditiis quas fuga enim at.</p>
+        <p class="text-white fs-4 bg-primary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cum quo perferendis nihil deserunt facilis earum, dolore nobis natus consequuntur ad ipsam doloremque error, saepe blanditiis quas fuga enim at.</p>
+        <p class="text-white fs-5 bg-primary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cum quo perferendis nihil deserunt facilis earum, dolore nobis natus consequuntur ad ipsam doloremque error, saepe blanditiis quas fuga enim at.</p>
+        <p class="text-white fs-6 bg-primary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cum quo perferendis nihil deserunt facilis earum, dolore nobis natus consequuntur ad ipsam doloremque error, saepe blanditiis quas fuga enim at.</p>
+        <hr>
+        <p class="text-white fw-bold bg-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reprehenderit asperiores sunt laborum impedit ut laudantium cupiditate atque consectetur, qui assumenda libero doloremque dolor optio nihil delectus totam. Similique, aliquam.</p>
+        <p class="text-white fw-bolder bg-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reprehenderit asperiores sunt laborum impedit ut laudantium cupiditate atque consectetur, qui assumenda libero doloremque dolor optio nihil delectus totam. Similique, aliquam.</p>
+        <hr>
+        <p class="text-white fst-italic bg-danger">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet blanditiis libero, doloremque deserunt dolorem eaque, reiciendis dolores corrupti quas repellendus porro, saepe dolorum harum provident illum vel eos accusamus repudiandae.</p>
+        <p class="text-white fst-normal bg-danger">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet blanditiis libero, doloremque deserunt dolorem eaque, reiciendis dolores corrupti quas repellendus porro, saepe dolorum harum provident illum vel eos accusamus repudiandae.</p>
+        <hr>
+
+    </div>
+
+</body>
+
+</html>

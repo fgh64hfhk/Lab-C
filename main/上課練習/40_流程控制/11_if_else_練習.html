@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <pre>
+
+        1. 取得系統現在時間(HH)
+        2. 如果是 8點 ~ 11點，在主控台顯示上午課程
+        3. 如果是 12點，在主控台顯示中午用餐時間
+        4. 如果是 13點 ~ 16點，在主控台顯示下午課程
+        5. 其他的時段，在主控台顯示非課程時間
+        -------------------------------------------
+        6. 透過三元運算子，判斷現在是 'AM' 還是 'PM'
+        
+    </pre>
+
+    <h1>JavaScript if else and else if</h1>
+
+    <button onclick="func()">取得系統時間</button>
+    <br>
+
+    <script>
+        function func() {
+            var now_time = new Date();
+            var localeString = now_time.toLocaleString();
+            var am_pm = (now_time.getHours() > 12) ? 'PM' : 'AM';
+            var hours = now_time.getHours();
+            var hours_format = (hours % 12 === 0) ? 12 : hours % 12;
+
+            var divElement = document.createElement('div');
+            var text = `${am_pm} ${hours_format}時 ${now_time.getMinutes()}分`;
+            var divText = document.createTextNode(text);
+            divElement.appendChild(divText);
+            document.body.appendChild(divElement);
+
+            var pElement = document.createElement('p');
+            var pText;
+
+            switch (true) {
+                case (hours >= 8 && hours <= 11):
+                    pText = `${hours_format}時 是上午課程的時段。`;
+                    break;
+                case (hours === 12):
+                    pText = `${hours_format}時 是中午用餐的時段。`;
+                    break;
+                case (hours >= 13 && hours <= 16):
+                    pText = `${hours_format}時 是下午課程的時段。`;
+                    break;
+                default:
+                    pText = `${hours_format}時 非課程的時段。`;
+            }
+
+            pElement.appendChild(document.createTextNode(pText));
+            document.body.appendChild(pElement);
+        }
+    </script>
+
+
+</body>
+
+</html>

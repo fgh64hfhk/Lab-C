@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>將功能獨立出來，提高程式的可用性</h4>
+    <p><a href="https://www.w3schools.com/js/js_functions.asp">https://www.w3schools.com/js/js_functions.asp</a></p>
+
+    <script>
+
+        // 10. 函式宣告（Function Declaration）-> hoisting affect
+        function apple() {
+            console.log('ok');
+        }
+
+        apple();
+
+
+        // 20. 需要資訊的函式 / 傳入參數的函式
+        //     呼叫需要資訊的函式時，要把資訊帶入
+        function bee(a, b) {
+            console.log(a);
+            console.log(b);
+        }
+
+        bee('胖丁', '皮卡丘'); // 胖丁、皮卡丘
+        bee('胖丁', '皮卡丘', '小火龍'); // 胖丁、皮卡丘
+        bee(); // undefined、undefined
+
+        console.clear();
+
+        // 30. 函式回傳值
+        function cat() {
+            console.log('貓咪');
+            return ['皮卡丘', '小火龍'];
+
+            // console.log('胖丁'); // 不會執行
+        }
+
+        var temp = cat();
+        console.log(temp);
+        console.log(temp[1]);
+
+        console.clear();
+
+        // 40. 函式運算式（Function Expressions）
+        //     變數 存放 計畫的內容，但呼叫時要小心
+
+        /* like
+        var dog;
+        dog();
+        dog = function () {
+            console.log('小狗');
+        }
+        */
+
+        // dog(); // dog is not a function
+
+        var dog = function () {
+            console.log('小狗');
+        }
+
+        dog();
+
+
+        // 等同下面這段
+        // var dog;
+        // dog();
+        // dog = function () {
+        //     console.log('小狗');
+        // }
+
+
+        // 45. 函式運算式，也可以設計有參數的形式
+        var egg = function (a, b) {
+            return a * b;
+        }
+
+        console.log(egg(5, 2));
+
+        // 50. 箭頭函式
+        var x = () => {
+            console.log('a');
+            console.log('b');
+        }
+
+        x();
+
+        // 51. 有參數和回傳值
+        var y = (a, b) => {
+            return a * b;
+        }
+
+        var res = y(5, 2);
+        console.log(res);
+
+        // 52. 不寫{}
+        var z = (a, b) => a * b;
+        var res2 = z(5, 2);
+        console.log(res2);
+
+
+    </script>
+</body>
+
+</html>

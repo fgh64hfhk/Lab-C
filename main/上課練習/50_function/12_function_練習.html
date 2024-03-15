@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            padding: 10px;
+            background-color: bisque;
+        }
+
+        pre {
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>12_function_練習</h1>
+    <h2>小練習：設計一個function，傳入數量和單價</h2>
+    <hr>
+    <div>
+        <div>
+            飲料的價格: <span id="price">$75元</span>
+        </div>
+    </div>
+    <div>
+        請輸入想要訂購的飲料數量
+        <input id="amount" type="text" value="0" placeholder="請輸入想要訂購的飲料數量"><br>
+        <button id="btn" onclick="func()">查詢</button>
+    </div>
+    <hr>
+    <div id="demo">
+        顯示總價格的區塊<br>
+    </div>
+    <hr>
+
+    <script>
+        function calculate(amount, price) {
+            var total;
+            if (amount >= 20) {
+                total = amount * (price * 0.9);
+            } else if (amount >= 10) {
+                total = amount * (price * 0.95);
+            } else {
+                total = amount * price;
+            }
+            return total;
+        }
+
+        function func(x) {
+            var price = document.getElementById('price').innerText;
+            // 使用正規表達式抓取數值部分
+            var priceValue = parseInt(price.match(/\d+/));
+            console.log(priceValue);
+            var amount = document.getElementById('amount').value;
+            console.log(amount);
+            var total = calculate(amount, priceValue);
+            console.log(total);
+            document.getElementById('demo').innerText += "$" + total + "元";
+        }
+
+    </script>
+</body>
+
+</html>

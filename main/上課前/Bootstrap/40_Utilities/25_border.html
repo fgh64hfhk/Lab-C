@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 5% 5%;
+            background-color: black;
+        }
+
+        .box {
+            width: 100%;
+            height: 50px;
+            margin: 5px;
+            background-color: brown;
+        }
+
+        .box>div {
+            display: inline-block;
+        }
+
+        div[class*='rounded'] {
+            width: 150px;
+        }
+
+        span {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            margin-left: 5px;
+            margin-right: 5px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h4>官方網站</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/utilities/borders/">https://getbootstrap.com/docs/5.2/utilities/borders/</a>
+        </p>
+        <hr>
+
+        <!-- 10. 為什麼這樣設定div不會出現? -->
+        <div class="box">
+            <div class="w-25 h-100 bg-success rounded">box</div>
+        </div>
+        <div class="box">
+            <div class="w-25 h-100 bg-success rounded">box</div>
+        </div>
+        <div class="box">
+            <div class="w-25 h-100 bg-success rounded">box</div>
+        </div>
+        <hr>
+
+        <!-- 20. 複製貼上官網的範例，為什麼 border 測試不出來 -->
+
+        <div class="box row">
+            <span class="border col rounded border-5"></span>
+            <span class="border-top col rounded border-5"></span>
+            <span class="border-end col rounded border-5"></span>
+            <span class="border-bottom col rounded border-5"></span>
+            <span class="border-start col rounded border-5"></span>
+        </div>
+
+        <hr>
+
+        <span class="border col rounded border-5"></span>
+        <span class="border-top col rounded border-5"></span>
+        <span class="border-end col rounded border-5"></span>
+        <span class="border-bottom col rounded border-5"></span>
+        <span class="border-start col rounded border-5"></span>
+
+        <hr>
+
+        <!-- 21. 設定不同的邊線顏色 -->
+
+        <span class="border border-primary rounded border-5"></span>
+        <span class="border-end border-danger rounded border-5"></span>
+        <hr>
+
+        <!-- 23. 調整 border 的寬度： border-N -->
+
+        <span class="border border-1 border-primary rounded">01</span>
+        <span class="border border-2 border-primary rounded">02</span>
+        <span class="border border-3 border-primary rounded">03</span>
+        <span class="border border-4 border-primary rounded">04</span>
+        <span class="border border-5 border-primary rounded">05</span>
+
+        <hr>
+
+        <!-- 25. 設定邊框圓角 -->
+        <!--     .rounded-top    | .rounded-bottom  -->
+        <!--     .rounded-start  | .rounded-end     -->
+        <!--     .rounded-circle | .rounded-pill   -->
+
+        <div class="box">
+            <div class="bg-info h-100 rounded-top"></div>
+            <div class="bg-info h-100 rounded-bottom"></div>
+            <div class="bg-info h-100 rounded-start"></div>
+            <div class="bg-info h-100 rounded-end"></div>
+            <div class="bg-info h-100 rounded-circle"></div>
+            <div class="bg-info h-100 rounded-pill"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
